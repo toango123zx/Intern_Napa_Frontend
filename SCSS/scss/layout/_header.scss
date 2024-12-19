@@ -1,0 +1,271 @@
+@use '../base/mixins' as mixin;
+@use '../base/variables' as var;
+
+.box-outer__contact {
+    display: none;
+}
+
+.box-outer__header {
+    padding: 40px 16px 0px 16px;
+    margin-bottom: 108px;
+}
+
+.box-outer__nav {
+    padding: 3px 3px 3px 9px;
+    background-color: #FFFFFF;
+    @include mixin.box-shadow();
+    border-radius: 3px;
+    position: relative;
+    @include mixin.layout-flex(var.$flex-row, $flex-space-between, var.$flex-center);
+
+
+    .img__logo--menu {
+        margin: 4px 3px;
+    }
+
+    .nav__button {
+        padding: 12px 6px;
+        // @include mixin.button-format(var.$blue, 3px, var.$white, 10px, 600, 10px);
+        @include mixin.button-format(var.$blue, 3px, var.$white);
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 10px;
+    }
+
+}
+
+.box-outer__logo {
+    @include mixin.layout-flex(var.$flex-row, $flex-center, var.$flex-center);
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+
+    .box-inner__logo {
+        &.box__background--white {
+            background-color: #FFFFFF;
+            padding: 24px 11px 24px 10px;
+            border-radius: 5px;
+            @include mixin.box-shadow();
+        }
+
+        .img__logo--website {
+            width: 79px;
+            height: 12px;
+        }
+    }
+}
+
+.nav__container {
+    .nav__content--list {
+        height: 100%;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .list__item--link {
+            color: var.$black;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+    }
+}
+
+.box-outer__introduce {
+    @include mixin.layout-flex(var.$flex-column, $flex-space-between, var.$flex-space-between, 40px);
+    padding-left: 16px;
+    padding-bottom: 120px;
+
+    .introduce__container--content {
+        background-color: var.$white;
+        margin: 20px 36px 0 0;
+        padding: 30px 12px 20.44px 18px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    h5 {
+        @include mixin.text-color(var.$blue);
+        margin-bottom: 18px;
+
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    h6 {
+        @include mixin.text-color(var.$black);
+        margin-bottom: 18.44px;
+    }
+
+    .box__store {
+        @include mixin.layout-flex(var.$flex-row, var.$flex-start, var.$flex-center, 10.17px);
+
+        .img__store {
+            max-width: 109.64px;
+        }
+    }
+
+    .introduce__container--border {
+        margin: 0 16px 0 36px;
+        border: 10px solid #7572FF;
+        margin-left: 20px;
+        padding: 30px 12px 20.44px 18px;
+
+        .introduce__container--border-hidden {
+            visibility: hidden;
+        }
+    }
+
+    .box-inner__introduce {
+        @include mixin.layout-flex(var.$flex-row, $flex-center, $flex-start, var.$flex-center);
+    }
+
+    .img__phone {
+        height: 521px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .box-outer__header {
+        padding: 35px 134px 0 135px;
+        margin-bottom: 82px;
+
+        .box-outer__contact {
+            @include mixin.layout-flex(var.$flex-row, $flex-space-between, var.$flex-center, 30px);
+            margin-bottom: 15px;
+
+            .box-inner__contact {
+                &.box-inner__contact--left {
+                    @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center, 47px);
+                }
+
+                &.box-inner__contact--right {
+                    @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center, 30px);
+
+                    .contact__social--link {
+                        @include mixin.layout-flex(var.$flex-row, var.$flex-center, var.$flex-center);
+                    }
+
+                    img {
+                        margin: 0
+                    }
+                }
+
+                .contact-outer__information {
+                    @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center, 18px);
+
+                    p {
+                        @include mixin.text-color(var.$white);
+                    }
+
+                }
+            }
+        }
+
+        .box-outer__nav {
+            padding: 5px 5px 5px 52px;
+
+        }
+    }
+
+    .contact__social--logo {
+        &.img__logo--mail {
+            margin: 2.25px 1.5px;
+        }
+
+        &.img__logo--call {
+            margin: 2.25px 2.25px;
+        }
+
+        &.img__logo--facebook {
+            margin: 1.5px 4.88px 5.25px 1.5px;
+        }
+
+        &.img__logo--instagram {
+            margin: 1.5px;
+        }
+
+        &.img__logo--twitter {
+            margin: 2.77px 1.38px 2.8px 1.32px;
+        }
+
+        &.img__logo--youtube {
+            margin: 3px 1.5px;
+        }
+    }
+
+    .nav__content--list {
+        .list__item--link {
+            color: var.$black;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+
+        .nav__item--home {
+            a {
+                color: var.$blue !important;
+                line-height: 26px;
+                text-decoration-line: underline !important;
+                text-decoration-style: solid;
+            }
+        }
+
+        .nav__item--about {
+            margin: 0px 40px 0px 38px;
+        }
+
+        .nav__item--blog {
+            margin: 0px 42px 0px 40px;
+        }
+    }
+
+    .box-outer__nav {
+        .img__logo--menu {
+            margin: 4px 3px;
+        }
+
+        .nav__button {
+            padding: 12px 15px 8px 16px;
+            // @include mixin.button-format(var.$blue, 3px, var.$white, 20px, 600, 30px);
+            @include mixin.button-format(var.$blue, 3px, var.$white);
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+
+        }
+
+    }
+
+    .box-outer__logo {
+        .box-inner__logo {
+            &.box__background--white {
+                padding: 31px 17px 31px 16px;
+            }
+
+            .img__logo--website {
+                width: 167px;
+                height: 28px;
+            }
+        }
+    }
+
+    .box-outer__introduce {
+        @include mixin.layout-flex(var.$flex-row, $flex-start, var.$flex-center, 124px);
+        padding-left: 135px;
+        padding-bottom: 83px;
+
+        .introduce__container--content,
+        .introduce__container--border {
+            max-width: 570px;
+        }
+
+        .img__phone {
+            width: 426px;
+        }
+    }
+
+}

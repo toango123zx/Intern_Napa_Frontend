@@ -1,0 +1,32 @@
+@use "./variables" as var;
+
+@mixin layout-flex($direction: row, $justify, $align, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin text-color($color) {
+    --color: #{$color};
+}
+
+@mixin button-format($bg-color, $radius, $color, $font-size, $font-weight, $line-height) {
+    --background-color: #{$bg-color};
+    --border-radius: #{$radius};
+    --font-size: #{$font-size};
+    --font-weight: #{$font-weight};
+    --color: #{$color};
+    --line-height: #{$line-height};
+}
+
+@mixin button-format($bg-color, $radius, $color) {
+    --background-color: #{$bg-color};
+    --border-radius: #{$radius};
+    --color: #{$color};
+}
+
+@mixin box-shadow($color: 0px, $x: 1px, $y: 10px, $blur: 0px, $spread: #0000001A) {
+    box-shadow: $color $x $y $blur $spread;
+}
