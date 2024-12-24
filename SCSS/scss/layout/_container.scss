@@ -23,6 +23,7 @@
 
     h5 {
         @include mixin.text-color(var.$black);
+        text-transform: uppercase;
     }
 
     p {
@@ -42,7 +43,7 @@
             @include mixin.layout-flex(var.$flex-column, var.$flex-center, var.$flex-center, 20px);
 
             .box-outer__card {
-                @include mixin.layout-flex(var.$flex-row, var.$flex-center, var.$flex-center, 18px);
+                @include mixin.layout-flex(var.$flex-row, var.$flex-center, var.$flex-start, 18px);
                 @include mixin.box-shadow();
                 padding: 18px 16px 10px 18px;
                 border-radius: 10px;
@@ -55,6 +56,10 @@
                 p {
                     margin: 0;
                     text-align: left;
+                }
+
+                img {
+                    padding: 2px;
                 }
             }
         }
@@ -74,6 +79,10 @@
     .box-outer__title {
         gap: 18px;
         margin: 0px 38px 32px 38px;
+
+        h5 {
+            color: var.$white;
+        }
     }
 
     .box-outer__content {
@@ -89,6 +98,14 @@
             .item__content {
                 @include mixin.layout-flex(var.$flex-column, var.$flex-center, var.$flex-center, 18px);
 
+                h6 {
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    max-width: 223px;
+                }
             }
         }
 
@@ -195,7 +212,7 @@
             @include mixin.layout-flex(var.$flex-row, var.$flex-start, var.$flex-center, 18px);
 
             .box-inner__ratting {
-                width: 96px;
+                min-width: 96px;
 
                 @include mixin.layout-flex(var.$flex-column, var.$flex-center, var.$flex-center, 8px);
                 // padding: 11px 16px 12px 8px;
@@ -208,6 +225,11 @@
                     @include mixin.text-color(var.$white);
                     margin: 0px;
                     text-align: center;
+                }
+
+                img {
+                    width: 18px;
+                    height: 18px;
                 }
             }
 
@@ -237,7 +259,7 @@
         // width: 1440px;
         // height: 477px;
         width: 100%;
-        height: 431px;
+        height: 375px;
         position: absolute;
         z-index: -1;
         background-size: cover;
@@ -247,6 +269,7 @@
     h5 {
         @include mixin.text-color(var.$white);
         margin: 0 47px 40px 47px;
+        text-align: center;
     }
 
     p {
@@ -278,6 +301,7 @@
 
 
                 .box-outer__icon {
+                    display: flex;
                     padding: 13px;
                     background-color: #FFFFFF;
                     border-radius: 50%;
@@ -338,10 +362,18 @@
                     color: #000;
                 }
 
-                img {
-                    padding: 2px 6.5px 2px 7px;
+                // img {
+                //     padding: 2px;
+                // }
+
+                .img--line {
+                    padding: 0px
                 }
             }
+        }
+
+        .box-inner__card:nth-child(3) {
+            padding: 29px 9px 53px 9px;
         }
     }
 }
@@ -351,7 +383,7 @@
         padding: 60px 0;
     }
 
-    h4 {
+    h5 {
         @include mixin.text-color(var.$white);
         margin: 0 30px;
         text-align: center;
@@ -414,13 +446,13 @@
                 height: 20px;
                 padding: 1px;
                 border-radius: 50%;
-                border: 0.5px solid #5956E9;
+                border: 0.5px solid var.$white;
             }
 
             .img__dot {
                 width: 16px;
                 height: 16px;
-                background-color: var.$blue;
+                background-color: var.$white;
                 border-radius: 50%;
             }
         }
@@ -436,6 +468,10 @@
 
         h5 {
             @include mixin.text-color(var.$black);
+        }
+
+        h6 {
+            text-transform: uppercase;
         }
 
         p {
@@ -458,7 +494,7 @@
 
             .card__information {
                 @include mixin.layout-flex(var.$flex-column, var.$flex-center, var.$flex-start);
-                margin: 0 18px 30px 7px;
+                margin: 0 7px 30px 18px;
 
                 h6 {
                     @include mixin.text-color(var.$black);
@@ -575,11 +611,12 @@
 
     &__information {
         .social-list {
-            @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center, 31px);
+            @include mixin.layout-flex(var.$flex-row, var.$flex-start, var.$flex-center, 30px);
             list-style: none;
             color: #000;
 
             &__link {
+                display: flex;
                 text-decoration: none;
             }
         }
@@ -630,6 +667,7 @@
             font-weight: 400;
             line-height: 24px;
             text-align: left;
+            border-radius: 4px;
 
         }
 
@@ -645,7 +683,6 @@
         }
     }
 
-    &__bottom {}
 
     &__line {
         border-top: 1px solid #FFFFFF;
@@ -656,7 +693,7 @@
             padding: 0 113px 0 112.76px;
 
             hr {
-                border: 4px solid #232233;
+                border: 2px solid #232233;
             }
         }
     }
@@ -691,7 +728,9 @@
     }
 
     .box--about {
-        margin: 120px 135px 120px 161px;
+        // margin: 120px 135px 120px 161px;
+        max-width: 1144px;
+        margin: 120px auto 120px auto;
 
         .box-outer__title {
             margin-bottom: 60px;
@@ -759,25 +798,59 @@
                 grid-column: 2;
             }
 
+            .grid__item--desgin {
+                grid-column: 1/ span 1;
+            }
+
+            .grid__item--phone {
+                grid-column: 3 / span 1;
+                grid-row: 2 / span 1;
+            }
+
+            .grid__item--eye {
+                grid-column: 3 / span 1;
+                grid-row: 3 / span 1;
+            }
+
+
+
             .grid__item--feature,
             .grid__item--desgin {
-                align-self: start;
-                margin: 0px
+                align-items: end;
+
+                margin: 0px;
+
+                .item__content {
+                    align-items: end;
+                }
+
+                p {
+                    text-align: right;
+                }
             }
 
             .grid__item--phone,
             .grid__item--eye {
-                align-self: end;
+                align-items: start;
                 margin: 0px;
+
+                .item__content {
+                    align-items: start;
+                }
+
+                p {
+                    text-align: left;
+                }
             }
 
-            .grid__item--feature,
-            .grid__item--phone {
-                text-align: right;
-            }
+            // .grid__item--feature,
+            // .grid__item--phone {
+
+            //     text-align: right;
+            // }
 
             p {
-                max-width: 297px;
+                max-width: 297px !important;
             }
 
             .grid__item--phone-feature {
@@ -792,6 +865,7 @@
     }
 
     .box-interface {
+        max-width: 1294px;
         margin: 120px auto 122px auto;
 
         .box-outer__title {
@@ -809,22 +883,6 @@
                 @include mixin.layout-flex(var.$flex-row, var.$flex-center, var.$flex-center, 18px);
                 z-index: 1;
                 top: 0px;
-
-                .box__nav {
-                    padding: 28.74px 34.13px 27.74px 33.67px;
-                    border-radius: 50%;
-                    border: 1px solid var.$blue;
-                    @include mixin.box-shadow();
-
-                    &.box__nav--back {
-                        background-color: var.$white;
-                    }
-
-                    &.img--forward {
-                        background-color: var.$blue;
-                    }
-                }
-
             }
 
             .box-outer__image--sub {
@@ -835,14 +893,39 @@
 
                 .box-inner__image--sub {
                     @include mixin.layout-flex(var.$flex-row, var.$flex-start, var.$flex-center, 30px);
+
+                    .box__nav {
+                        padding: 28.74px 34.13px 27.74px 33.67px;
+                        border-radius: 50%;
+                        border: 1px solid var.$blue;
+                        @include mixin.box-shadow();
+
+                        &.box__nav--back {
+                            background-color: var.$white;
+                            padding: 28.74px 34.13px 28.74px 34.67px;
+                            border: 1px solid #5956E9;
+                            box-shadow: 0px 1px 10px 0px #0000001A;
+                            border-radius: 50%;
+                        }
+
+                        &.box__nav--forward {
+                            padding: 28.74px 34.67px 28.74px 34.13px;
+                            border-radius: 50%;
+                            background-color: var.$blue;
+                            box-shadow: 0px 1px 10px 0px #0000001A;
+
+                        }
+                    }
+
                 }
             }
         }
     }
 
     .box-ratting {
-        margin: 0 auto;
-        padding: 0 138px 120px 136px;
+        max-width: 1166px;
+        margin: 0 auto 120px auto;
+        // padding: 0 138px 120px 136px;
         @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center);
 
         .box-outer__content {}
@@ -864,29 +947,21 @@
                 gap: 30px;
 
                 .box-inner__ratting {
-                    width: 170px;
+                    min-width: 170px;
                     gap: 18px;
                     // padding: 30px 22px 20px 21px;
                     padding: 30px 0 20px 0;
                     border-radius: 10px;
 
-                    h6 {
-                        font-size: 25px;
-                        font-weight: 600;
-                        line-height: 25px;
-                    }
-
-
                     p {
-                        @include mixin.text-color(var.$white);
                         margin: 0px;
-                        text-align: center;
-                        font-size: 20px;
-                        font-weight: 600;
-                        line-height: 30px;
-
+                        text-transform: uppercase;
                     }
 
+                    img {
+                        width: 35px;
+                        height: 35px;
+                    }
                 }
             }
         }
@@ -915,7 +990,6 @@
         h5 {
             @include mixin.text-color(var.$white);
             margin: 0 auto 23px auto;
-            text-align: center
         }
 
         p {
@@ -935,9 +1009,12 @@
     }
 
     .box-team {
-        .box-outer__content {
-            margin: 0 135px 120px 135px;
-        }
+        max-width: 1170px;
+        margin-bottom: 120px;
+
+        // .box-outer__content {
+        //     margin: 0 135px 120px 135px;
+        // }
 
         .box-outer__title {
             margin-bottom: 60px;
@@ -951,6 +1028,8 @@
             @include mixin.layout-flex(var.$flex-row, var.$flex-center, var.$flex-center, 30px);
 
             .box-inner__card {
+                width: calc((100% * 1 / 3) - (30px - (30px * 1 / 3)));
+
                 .card__information {
                     h4 {
                         margin-bottom: 1px;
@@ -965,8 +1044,13 @@
     }
 
     .box--customer {
+        .box-width {
+            max-width: 1171px;
+        }
+
         .box-inner__container {
             padding: 120px 0 118px 0;
+
         }
 
         .box-outer__title {
@@ -976,7 +1060,8 @@
 
         .box-outer__content {
             position: relative;
-            margin: 0 135px 0 134px;
+            // margin: 0 135px 0 134px;
+            margin: 0 auto;
             @include mixin.layout-flex(var.$flex-column, var.$flex-center, var.$flex-center, 60px);
 
             .box-outer__card {
@@ -988,14 +1073,6 @@
                     @include mixin.layout-flex(var.$flex-column, var.$flex-start, var.$flex-center, 20px);
 
                     .card__information {
-                        h5 {
-                            margin-bottom: 1px;
-                            font-size: 31.25px;
-                            font-weight: 700;
-                            line-height: 47.25px;
-                            text-align: center;
-                            color: var.$black;
-                        }
 
                         h6 {
                             font-size: 20px;
@@ -1065,8 +1142,9 @@
     }
 
     .box--blog {
+        max-width: 1170px;
         margin: 120px auto 248px auto;
-        padding: 0 135px;
+        // padding: 0 135px;
 
         .box-outer__title {
             gap: 23px;
@@ -1105,12 +1183,24 @@
     }
 
     .footer {
-        padding: 235px 135px 18px 136px;
+        // padding: 235px 135px 18px 136px;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 235px 0 18px 0;
 
         .box-outer__conatact {
-            padding: 0 135px;
+            padding: 0;
+            max-width: 1170px;
+            margin: 0 auto;
         }
 
+        &__top {
+            border-radius: 30px !important;
+
+            &.background--white {
+                padding: 65px 0px;
+            }
+        }
 
         &__icon {
             padding: 30px;
@@ -1147,8 +1237,12 @@
                 margin-right: 246px;
             }
 
+            &:nth-child(3) {
+                min-width: 369px;
+            }
+
             .social-list {
-                @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center, 31px);
+                @include mixin.layout-flex(var.$flex-row, var.$flex-start, var.$flex-center, 30px);
                 list-style: none;
                 color: #000;
 
@@ -1180,7 +1274,7 @@
                     font-weight: 600;
                     line-height: 37.5px;
                     text-align: left;
-
+                    text-transform: lowercase;
                 }
             }
         }
@@ -1229,7 +1323,7 @@
 
             &--block {
                 margin-bottom: 33px;
-                margin-right: 71px;
+                margin-right: 0px;
                 max-width: 298px;
             }
         }
@@ -1248,9 +1342,9 @@
 
                 hr {
                     width: 117px;
-                    border: 4px solid #232233;
+                    border: 2px solid #232233;
                     transform: rotate(90deg);
-                    border: 4px solid #6C6C72
+                    border: 2px solid #6C6C72
                 }
             }
         }

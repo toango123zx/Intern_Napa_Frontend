@@ -7,37 +7,72 @@ body {
     text-decoration: none;
 }
 
-h2, .h2 {
+h2,
+.h2 {
     font-size: 48.83px;
     font-weight: 700;
     line-height: 63.48px;
     color: var(--color, var.$blue);
 }
 
-h4, .h4 {
+h4,
+.h4 {
     font-size: 31.25px;
     font-weight: 700;
     line-height: 47.25px;
     color: var(--color, var.$black);
 }
 
-h5, .h5 {
+h5,
+.h5 {
     font-size: 25px;
     font-weight: 600;
     line-height: 37.5px;
     color: var(--color, var.$white);
 }
 
-h6, .h6 {
+h6,
+.h6 {
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
     color: var(--color, var.$white);
 }
 
-p, .p {
+p,
+.p {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     color: var(--color, var.$gray);
+}
+
+@media only screen and (min-width: 768px) {
+    .h2-desktop {
+        font-size: 48.83px;
+        font-weight: 700;
+        line-height: 63.48px;
+        color: var(--color, var.$blue);
+    }
+
+    .h4-desktop {
+        font-size: 31.25px;
+        font-weight: 700;
+        line-height: 47.25px;
+        color: var(--color, var.$black);
+    }
+
+    .h5-desktop {
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 37.5px;
+        color: var(--color, var.$white);
+    }
+
+    .h6-desktop {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        color: var(--color, var.$white);
+    }
 }

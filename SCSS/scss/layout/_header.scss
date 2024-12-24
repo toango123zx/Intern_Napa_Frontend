@@ -6,8 +6,8 @@
 }
 
 .box-outer__header {
-    padding: 40px 16px 0px 16px;
-    margin-bottom: 108px;
+    margin: 0 16px 108px 16px;
+    padding: 40px 0 0px 0;
 }
 
 .box-outer__nav {
@@ -80,7 +80,7 @@
     .introduce__container--content {
         background-color: var.$white;
         margin: 20px 36px 0 0;
-        padding: 30px 12px 20.44px 18px;
+        padding: 30px 12px 40.44px 18px;
         position: absolute;
         z-index: 1;
     }
@@ -88,6 +88,7 @@
     h5 {
         @include mixin.text-color(var.$blue);
         margin-bottom: 18px;
+        text-transform: uppercase;
 
     }
 
@@ -112,7 +113,7 @@
         margin: 0 16px 0 36px;
         border: 10px solid #7572FF;
         margin-left: 20px;
-        padding: 30px 12px 20.44px 18px;
+        padding: 30px 2px 60.44px 8px;
 
         .introduce__container--border-hidden {
             visibility: hidden;
@@ -120,7 +121,7 @@
     }
 
     .box-inner__introduce {
-        @include mixin.layout-flex(var.$flex-row, $flex-center, $flex-start, var.$flex-center);
+        @include mixin.layout-flex(var.$flex-row, $flex-center, $flex-start);
     }
 
     .img__phone {
@@ -130,142 +131,176 @@
 
 
 @media only screen and (min-width: 768px) {
-    .box-outer__header {
-        padding: 35px 134px 0 135px;
-        margin-bottom: 82px;
+    .header {
+        max-width: 1171px;
 
-        .box-outer__contact {
-            @include mixin.layout-flex(var.$flex-row, $flex-space-between, var.$flex-center, 30px);
-            margin-bottom: 15px;
+        .box-outer__header {
+            // padding: 35px 134px 0 135px;
+            // max-width: 1171px;
+            margin: 0 0 82px 0;
+            // margin: 35px 134px 82px 135px;
+            // margin-bottom: 82px;
 
-            .box-inner__contact {
-                &.box-inner__contact--left {
-                    @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center, 47px);
-                }
+            h5 {
+                font-size: 48.83px;
+                font-weight: 700;
+                line-height: 63.48px;
+            }
 
-                &.box-inner__contact--right {
-                    @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center, 30px);
+            .box-outer__nav {
+                border-radius: 5px;
+            }
 
-                    .contact__social--link {
-                        @include mixin.layout-flex(var.$flex-row, var.$flex-center, var.$flex-center);
+            .box-outer__contact {
+                @include mixin.layout-flex(var.$flex-row, $flex-space-between, var.$flex-center, 30px);
+                margin-bottom: 15px;
+
+                .box-inner__contact {
+                    &.box-inner__contact--left {
+                        @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center, 47px);
                     }
 
-                    img {
-                        margin: 0
+                    &.box-inner__contact--right {
+                        @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center, 30px);
+
+                        .contact__social--link {
+                            @include mixin.layout-flex(var.$flex-row, var.$flex-center, var.$flex-center);
+                        }
+
+                        img {
+                            margin: 0
+                        }
+                    }
+
+                    .contact-outer__information {
+                        @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center, 18px);
+
+                        p {
+                            @include mixin.text-color(var.$white);
+                        }
+
                     }
                 }
+            }
 
-                .contact-outer__information {
-                    @include mixin.layout-flex(var.$flex-row, var.$flex-space-between, var.$flex-center, 18px);
+            .box-outer__nav {
+                padding: 5px 5px 5px 52px;
 
-                    p {
-                        @include mixin.text-color(var.$white);
-                    }
+            }
+        }
 
+        .contact__social--logo {
+            &.img__logo--mail {
+                margin: 2.25px 1.5px;
+            }
+
+            &.img__logo--call {
+                margin: 2.25px 2.25px;
+            }
+
+            &.img__logo--facebook {
+                margin: 1.5px 4.88px 5.25px 1.5px;
+            }
+
+            &.img__logo--instagram {
+                margin: 1.5px;
+            }
+
+            &.img__logo--twitter {
+                margin: 2.77px 1.38px 2.8px 1.32px;
+            }
+
+            &.img__logo--youtube {
+                margin: 3px 1.5px;
+            }
+        }
+
+        .nav__content--list {
+            .list__item--link {
+                color: var.$black;
+                text-decoration: none;
+                vertical-align: middle;
+            }
+
+            .nav__item--home {
+                a {
+                    color: var.$blue !important;
+                    line-height: 26px;
+                    text-decoration-line: underline !important;
+                    text-decoration-style: solid;
                 }
+            }
+
+            .nav__item--about {
+                margin: 0px 40px 0px 38px;
+            }
+
+            .nav__item--blog {
+                margin: 0px 42px 0px 40px;
             }
         }
 
         .box-outer__nav {
-            padding: 5px 5px 5px 52px;
+            .img__logo--menu {
+                margin: 4px 3px;
+            }
+
+            .nav__button {
+                padding: 12px 15px 8px 16px;
+                // @include mixin.button-format(var.$blue, 3px, var.$white, 20px, 600, 30px);
+                @include mixin.button-format(var.$blue, 3px, var.$white);
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 30px;
+
+            }
 
         }
-    }
 
-    .contact__social--logo {
-        &.img__logo--mail {
-            margin: 2.25px 1.5px;
-        }
+        .box-outer__logo {
+            .box-inner__logo {
+                &.box__background--white {
+                    padding: 31px 17px 31px 16px;
+                }
 
-        &.img__logo--call {
-            margin: 2.25px 2.25px;
-        }
-
-        &.img__logo--facebook {
-            margin: 1.5px 4.88px 5.25px 1.5px;
-        }
-
-        &.img__logo--instagram {
-            margin: 1.5px;
-        }
-
-        &.img__logo--twitter {
-            margin: 2.77px 1.38px 2.8px 1.32px;
-        }
-
-        &.img__logo--youtube {
-            margin: 3px 1.5px;
-        }
-    }
-
-    .nav__content--list {
-        .list__item--link {
-            color: var.$black;
-            text-decoration: none;
-            vertical-align: middle;
-        }
-
-        .nav__item--home {
-            a {
-                color: var.$blue !important;
-                line-height: 26px;
-                text-decoration-line: underline !important;
-                text-decoration-style: solid;
+                .img__logo--website {
+                    width: 167px;
+                    height: 28px;
+                }
             }
         }
 
-        .nav__item--about {
-            margin: 0px 40px 0px 38px;
-        }
+        .box-outer__introduce {
+            @include mixin.layout-flex(var.$flex-row, $flex-start, var.$flex-center, 124px);
+            padding-left: 0;
+            padding-bottom: 83px;
 
-        .nav__item--blog {
-            margin: 0px 42px 0px 40px;
-        }
-    }
-
-    .box-outer__nav {
-        .img__logo--menu {
-            margin: 4px 3px;
-        }
-
-        .nav__button {
-            padding: 12px 15px 8px 16px;
-            // @include mixin.button-format(var.$blue, 3px, var.$white, 20px, 600, 30px);
-            @include mixin.button-format(var.$blue, 3px, var.$white);
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 30px;
-
-        }
-
-    }
-
-    .box-outer__logo {
-        .box-inner__logo {
-            &.box__background--white {
-                padding: 31px 17px 31px 16px;
+            .box-inner__introduce {
+                @include mixin.layout-flex(var.$flex-row, $flex-start, $flex-start);
             }
 
-            .img__logo--website {
-                width: 167px;
-                height: 28px;
+            h5 {
+                font-size: 48.83px;
+                font-weight: 700;
+                line-height: 63.48px;
+            }
+
+
+            .introduce__container--content {
+                max-width: 570px;
+                margin-top: 51px;
+            }
+
+            .introduce__container--border {
+                max-width: 570px;
+                margin-left: 50px;
+                padding: 30px 174px 19px 18px;
+                border: 18px solid #7572FF;
+            }
+
+            .img__phone {
+                height: 725px;
             }
         }
     }
-
-    .box-outer__introduce {
-        @include mixin.layout-flex(var.$flex-row, $flex-start, var.$flex-center, 124px);
-        padding-left: 135px;
-        padding-bottom: 83px;
-
-        .introduce__container--content,
-        .introduce__container--border {
-            max-width: 570px;
-        }
-
-        .img__phone {
-            width: 426px;
-        }
-    }
-
 }
