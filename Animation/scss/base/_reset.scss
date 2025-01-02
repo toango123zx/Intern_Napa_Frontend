@@ -1,0 +1,32 @@
+@use './variables' as var;
+@use './mixin' as mixin;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: "Plus Jakarta Sans", serif;
+}
+
+.button {
+    padding: var(--padding);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    color: var(--color);
+    line-height: var(--line-height);
+}
+
+a {
+    text-decoration: none;
+    color: var.$black;
+}  
+
+.box-container {
+    width: 100%;
+    max-width: 1370px;
+    margin: 0 auto;
+
+}

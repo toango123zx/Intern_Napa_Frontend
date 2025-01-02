@@ -1,0 +1,130 @@
+@use "./variables" as var;
+
+@mixin media-query($property, $sm, $md, $lg, $xl: null) {
+    #{$property}: $sm;
+
+    @media (min-width: var.$breakpoint-md) and (max-width: var.$breakpoint-lg) {
+        #{$property}: $md;
+    }
+
+    @media (min-width: var.$breakpoint-lg) and (max-width: var.$breakpoint-xl) {
+        #{$property}: $lg;
+    }
+
+    @if $xl !=null {
+        @media (min-width: var.$breakpoint-xl) {
+            #{$property}: $xl;
+        }
+    }
+}
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint ==sm {
+        @media (max-width: var.$breakpoint-md) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==md {
+        @media (min-width: var.$breakpoint-md) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==lg {
+        @media (min-width: var.$breakpoint-lg) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==xl {
+        @media (min-width: var.$breakpoint-xl) {
+            @content;
+        }
+    }
+}
+
+@mixin hidden($breakpoint) {
+    @if $breakpoint ==sm {
+        @media (max-width: var.$breakpoint-md) {
+            display: none;
+        }
+    }
+
+    @else if $breakpoint ==md {
+        @media (min-width: var.$breakpoint-md) {
+            display: none;
+        }
+    }
+
+    @else if $breakpoint ==lg {
+        @media (min-width: var.$breakpoint-lg) {
+            display: none;
+        }
+    }
+
+    @else if $breakpoint ==xl {
+        @media (min-width: var.$breakpoint-xl) {
+            display: none;
+        }
+    }
+}
+
+
+@mixin show($breakpoint) {
+    @if $breakpoint ==sm {
+        @media (max-width: var.$breakpoint-md) {
+            display: block;
+        }
+    }
+
+    @else if $breakpoint ==md {
+        @media (min-width: var.$breakpoint-md) {
+            display: block;
+        }
+    }
+
+    @else if $breakpoint ==lg {
+        @media (min-width: var.$breakpoint-lg) {
+            display: block;
+        }
+    }
+
+    @else if $breakpoint ==xl {
+        @media (min-width: var.$breakpoint-xl) {
+            display: block;
+        }
+    }
+}
+
+
+@mixin button-format($bg-color, $radius, $color, $font-size, $font-weight, $line-height) {
+    --background-color: #{$bg-color};
+    --border-radius: #{$radius};
+    --font-size: #{$font-size};
+    --font-weight: #{$font-weight};
+    --color: #{$color};
+    --line-height: #{$line-height};
+}
+
+@mixin layout-flex($direction: var.$flex, $justify: var.$flex-center, $align: var.$flex-center, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin button($size: var.$primary, $bg-color: var.$purple, $color: var.$black, $padding: 0) {
+    --padding: #{$padding};
+
+    @if ($size ==var.$primary) {
+        @include button-format($bg-color, 648px, $color, 20px, 400, 1.2em);
+
+    }
+
+    @else if ($size ==var.$small) {
+        @include button-format($bg-color, 648px, $color, 16px, 400, 1.2em);
+    }
+
+}
