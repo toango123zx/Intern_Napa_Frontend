@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #f0f2f5;
+    margin: 0px;
+    padding: 0px;
+}
+
+.page-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+}
+
+.box-outer {
+    width: 60%;
+    height: 100%;
+}
+
+#box-outer__singUp {
+    margin-top: 120px;
+    margin-bottom: 86px;
+
+}
+
+/* style taskbar */
+.box__taskbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 45px 0px 58px;
+
+
+}
+
+.sign-up__taskbar {
+    position: absolute;
+    margin: 40px 0px 37.56px 0px;
+    padding: 0px 45px 0px 58px;
+
+    z-index: 1;
+
+}
+
+.sign-in__taskbar {
+    margin: 40px 0px 94px 0px;
+    padding: 0px 54px 0px 58px;
+
+}
+
+.box-outer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.box__logo--circle {
+    padding: 9.4px 11.5px;
+    background-color: #13842c;
+
+    border-radius: 50%;
+}
+
+.box__logo--square {
+    padding: 8px 11px;
+    background-color: #090B0F;
+    backdrop-filter: blur(42.95073318481445px);
+    border-radius: 10px;
+
+}
+
+.box-inner__logo--text {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #000000;
+    font-size: 17px;
+    line-height: 41px;
+    margin: 0px;
+}
+
+.box-outer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-inner__social--text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14.5px;
+    margin: 0px;
+}
+
+.text__social--green {
+    padding-left: 8px;
+    font-weight: 500;
+    color: #20DC49;
+}
+
+/* end taskbar */
+
+/* style container */
+.box-outer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.box-inner__container {
+    width: fit-content  ;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+.box-outer__title {
+    text-align: center;
+}
+
+.sign-in__title--h2 {
+    margin: 0px 0px 3px 0px;
+    color: #000000;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 44px;
+
+}
+
+.sign-up__title--h2 {
+    margin: 0px 0px 3px 0px;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 44px;
+}
+
+.box-inner__title--text {
+    margin: 0px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+.sign-up__title--text {
+    font-size: 15.04px;
+    font-weight: 400;
+    line-height: 10.9px;
+    text-align: center;
+    color: #7E7E7E;
+}
+
+.box-outer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px
+}
+
+.sign-up__social {
+    margin: 42px 0px 13px 0px;
+}
+
+.sign-in__social {
+    margin: 37px 0px;
+
+}
+
+#box-outer__social--sign-up {
+    margin: 0px;
+    gap: 0px;
+}
+
+.button__social--third-party {
+    max-width: 126px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    border-color: #20DC49;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 26px;
+    gap: 8px;
+}
+
+.button__text {
+    margin: 0px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 44px;
+    text-align: left;
+}
+
+.box-outer__separation {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 14.5px;
+}
+
+.sign-up__separation {
+    margin-bottom: 25px;
+}
+
+.sign-in__separation {
+
+    margin: 35px 0px;
+}
+
+.box-outer__separation::before {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #DBDBDB;
+    margin-right: 11px;
+}
+
+.box-outer__separation::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #DBDBDB;
+    margin-left: 11px;
+
+}
+
+.box-outer__input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sign-up__input {
+    margin-bottom: 28px;
+    gap: 20px;
+}
+
+.sign-in__input {
+    margin-bottom: 21px;
+    gap: 38px;
+
+}
+
+input {
+    width: 100%;
+    height: 70px;
+    border-radius: 10px;
+    border-color: #d9d9d9;
+    border-style: solid;
+    border-width: 1px;
+    padding: 24px;
+}
+
+input::placeholder {
+    color: #5A5A5A;
+}
+
+.box-inner__input--password {
+    position: relative;
+}
+
+.box-inner__input--password .box-inner__logo--img {
+    right: 0px;
+    position: absolute;
+    padding: 26px;
+    z-index: 1;
+
+}
+
+.button--sign-up {
+    width: 100%;
+    padding: 21px 142px;
+    background-color: #20dc49;
+    border-width: 0px;
+    border-radius: 10px;
+}
+
+.button--sign-up>.button__text {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 14.85px;
+    font-weight: 400;
+    line-height: 11.96px;
+    color: #000000;
+}
+
+.text__description-note {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 14.5px;
+    text-align: center;
+    color: #5a5a5a;
+    margin-top: 56.25px;
+}
+
+/* end container */
+
+/* style box-image */
+.box-image {
+    position: relative;
+    width: 40%;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.sign-up__background {
+    display: flex;
+    align-items: center;
+    background-image: url('../images/backgroundSignUp.svg');
+}
+
+.sign-in__background {
+    background-image: url('../images/backgroundSignIn.svg');
+}
+
+.box-image__container {
+    margin-left: 73px;
+}
+
+.box-image--infomation {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #20dc49;
+
+}
+
+.box-outer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.box-image--infomation {
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 7px 31px 7px 8.5px;
+
+}
+
+.box-image--infomation>.button__text {
+    font-family: "Poppins", sans-serif;
+    margin: 0px;
+    font-size: 15.29px;
+    font-weight: 400;
+    line-height: 18.68px;
+    text-align: left;
+}
+
+.outer-box--blur {
+    border-radius: 10px;
+}
+
+.sign-up--blur {
+    width: 246px;
+    margin-top: 15px;
+    background-color: #00000024;
+    backdrop-filter: blur(42.95073318481445px)
+}
+
+.sign-in--blur {
+    position: absolute;
+    bottom: 0px;
+    margin: 49px 36px;
+    padding: 42px 0px 59px 37px;
+    height: max-content;
+    background-color: #fff2f221;
+    backdrop-filter: blur(100px)
+}
+
+.box-image--fact {
+    padding: 17px 17px 20px 20px;
+}
+
+.outer-box--blur>p {
+    font-family: "Roboto", serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.99px;
+    text-align: left;
+    color: #ffffff;
+    margin: 0px;
+    padding-top: 13px;
+}
+
+.box-outer__logo--green {
+    width: max-content;
+    background-color: #20dc49;
+    border-radius: 10px;
+    box-shadow: 0px 0px 100px #20dc49;
+    padding: 11px 14px 12px 17px;
+}
+
+.box-outer__logo--green>.box-inner__logo--text {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.11px;
+    text-align: left;
+}
+
+.box-inner__text>p {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32.97px;
+    text-align: left;
+    color: #FFFFFF;
+    margin: 0px;
+    padding: 25px 57px 0px 0px;
+}
+
+.box-outer__remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.box-outer__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 21px 0px 35px 0px;
+}
+
+.box-outer__option .box-outer__social>a {
+    color: #d93f21;
+    text-decoration: none;
+}
+
+.button--login {
+    width: 100%;
+    padding: 20px 173px;
+    background-color: #ffffff00;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #5a5a5a;
+    border-style: solid;
+}
+
+.button--login>.button__text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 14.5px;
+    color: #5a5a5a;
+}
+
+/* end style component box image */
+
+.sign-in--bottom {
+    margin-bottom: 167px;
+}

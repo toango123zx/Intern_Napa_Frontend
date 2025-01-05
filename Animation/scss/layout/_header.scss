@@ -67,98 +67,59 @@
                 font-weight: 400;
                 color: var.$black;
 
-                .button-container {
-                    display: flex;
+                @include mixin.respond-to(md) {
+                    @include mixin.layout-flex(var.$flex-row, var.$flex-start, var.$flex-center);
                 }
 
-                .custom-button {
-                    display: flex;
-                    align-items: center;
-                    background-color: #d9c3f7;
-                    /* Màu nền tím nhạt */
-                    color: #000;
-                    border: none;
-                    border-radius: 50px;
-                    padding: 10px 20px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                    position: relative;
-                    overflow: hidden;
+                &:hover {
+                    .button {
+                        &.button--arrow {
+                            .button--main {
+                                transform: translate(125%, -100%);
+                                opacity: 0;
+                            }
+
+                            .button--sub {
+                                transform: translate(0%, 0%);
+                                opacity: 1;
+                            }
+                        }
+                    }
                 }
 
-                .custom-button .text {
-                    margin-right: 15px;
-                    /* Khoảng cách giữa chữ và hình tròn */
-                }
+                .button {
+                    font-family: "Plus Jakarta Sans", serif;
+                    @include mixin.button(var.$primary, var.$purple, var.$black, 15px 40px);
 
-                .custom-button .circle {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: #fff;
-                    /* Màu nền của hình tròn */
-                    color: #000;
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    /* Tạo hình tròn */
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                    font-size: 18px;
-                    transition: transform 0.3s ease, background-color 0.3s ease;
-                }
+                    &.button--arrow {
+                        position: relative;
+                        @include mixin.layout-flex(var.$flex-row, var.$flex-center, var.$flex-center);
+                        // padding: 15px 15px;
+                        width: 54px;
+                        height: 54px;
+                        padding: 0;
 
-                .custom-button-icon .icon {
-                    translate: 0px 12px;
-                    display: inline-block;
-                    transform: rotate(-45deg);
-                    transition: transform 0.3s ease, translate 0.3s ease;
-                    transform-origin: 50% 50% 0px;
-                }
 
-                .button-container:hover .icon {
-                    transform: rotate(-45deg) translate(29px, 0px);
-                }
+                        img {
+                            position: absolute;
+                            width: 24px;
+                            height: 24px;
+                        }
 
-                .button-container:hover .icon-hover {
-                    display: block;
-                    translate: 0px -10px;
-                }
+                        .button--main {
+                            opacity: 1;
+                            transition: transform 0.3s ease, opacity 0.1s ease;
 
-                .custom-button-icon {
-                    display: flex;
-                    align-items: center;
-                    background-color: #d9c3f7;
-                    color: #000;
-                    border: none;
-                    border-radius: 50px;
-                    padding: 0;
-                    font-size: 16px;
-                    font-weight: bold;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                    position: relative;
-                    overflow: hidden;
-                    width: 38.5px;
-                    justify-content: center;
-                }
+                        }
 
-                .icon-hover {
-                    display: block;
-                    transform: rotate(-45deg);
-                    transition: transform 0.3s ease, translate 0.3s ease;
-                    translate: -16px 12px;
-                    transform-origin: 50% 50% 0px;
-                }
+                        .button--sub {
+                            transform: translate(-125%, 100%);
+                            opacity: 0;
+                            transition: transform 0.3s ease, opacity 0.1s ease;
 
-                img {
-                    width: 24px;
-                    height: 24px;
+                        }
+                    }
                 }
-
             }
         }
     }

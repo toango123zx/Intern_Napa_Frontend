@@ -11,11 +11,5 @@ const buttonSwitch = () => {
 
 const question = (item) => {
     const description = item.querySelector('.question__text--description');
-
-    // Kiểm tra và bật/tắt display
-    if (description.style.display === 'block') {
-        description.style.display = 'none';
-    } else {
-        description.style.display = 'block';
-    }
+    description.classList.toggle('question--show');
 }

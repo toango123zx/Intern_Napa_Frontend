@@ -22,11 +22,14 @@
 a {
     text-decoration: none;
     color: var.$black;
-}  
+}
 
 .box-container {
     width: 100%;
     max-width: 1370px;
     margin: 0 auto;
+}
 
+.reveal-box {
+    transform: translateY(50px);
 }

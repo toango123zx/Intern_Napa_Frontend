@@ -16,13 +16,17 @@
     <link rel="stylesheet" type="text/css" href="assets/animations/slick-1.8.1/slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="assets/animations/slick-1.8.1/slick-1.8.1/slick/slick-theme.css" />
     <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css+" /> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
     <title>Home</title>
 </head>
 
 
 <body class="home-page">
     <div class="box__conatainer">
-        <div class="header">
+        <div class="header scroll-half">
             <div class="header__logo">
                 <img src="./assets/images/logo.png" alt="logo">
                 <h3>Bayt</h3>
@@ -41,16 +45,10 @@
                     <li><a href="">Blog</a></li>
                     <li>
                         <a href="">
-                            <div class="button-container">
-                                <button class="custom-button">
-                                    <span class="text">Get Started</span>
-                                    </span>
-                                </button>
-                                <button class="custom-button-icon">
-                                    <span class="circle">
-                                        <span class="icon">→</span>
-                                        <span class="icon-hover">→</span>
-                                </button>
+                            <div class="button">Get Started</div>
+                            <div class="button button--arrow">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
                             </div>
                         </a>
                     </li>
@@ -61,7 +59,7 @@
     </div>
 
     <div class="box_container">
-        <div class="introduce">
+        <div class="introduce scroll-half">
             <div class="introduce__content">
                 <h1>THE PREMIER CHOICE IN REAL ESTATE SERVICES.</h1>
                 <div class="introduce__describe">
@@ -72,7 +70,8 @@
                             <a href="">
                                 <div class="button">Get Started</div>
                                 <div class="button button--arrow">
-                                    <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                                    <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                    <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
                                 </div>
                             </a>
                         </div>
@@ -94,14 +93,16 @@
             </div>
             <div class="introduce__image">
                 <div class="introduce__tag">
-
                     <div class="introduce__tag--top">
-                        <div class="button">
-                            <p>+ 3K Listings</p>
-                            <div class="button button--arrow">
-                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                        <a href="" class="button">
+                            <div class="button">
+                                <p>+ 3K Listings</p>
+                                <div class="button button--arrow">
+                                    <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                    <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="introduce__tag--bottom">
                         <div class="tag">
@@ -120,7 +121,7 @@
                                 </div>
                             </div>
                         </div>
-                        <img src="./assets/images/svgexport12.png" alt="introduce2">
+                        <img src="./assets/images/backgroundIntroduce3.png" alt="introduce2">
                     </div>
                 </div>
                 <img src="./assets/images/introduce1.png" alt="introduce1">
@@ -131,7 +132,7 @@
 
     <div class="box-container">
         <div class="service__wrap">
-            <div class="service">
+            <div class="service scroll-half">
                 <h2>Real Estate Management Services</h2>
                 <div class="service__grid">
                     <div class="service__item service__item--large">
@@ -178,34 +179,45 @@
         </div>
     </div>
     <div class="box-container about__container">
-        <div class="about__wrap">
+        <div class="about__wrap scroll-half">
             <div class="about">
                 <div class="about__tag">
-                    <div class="button button--tag">
-                        <p>Top Experience</p>
-                        <div class="button button--arrow">
-                            <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                    <a href="" class="button button--tag">
+                        <div class="button">
+                            <p>Top Experience</p>
+                            <div class="button button--arrow">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="button button--tag">
-                        <p>24/7 Support</p>
-                        <div class="button button--arrow">
-                            <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                    </a>
+                    <a href="" class="button button--tag">
+                        <div class="button">
+                            <p>24/7 Support</p>
+                            <div class="button button--arrow">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
+                            </div>
                         </div>
-                    </div>
-                    <div class="button button--tag">
-                        <p>Advanced Technology</p>
-                        <div class="button button--arrow">
-                            <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                    </a>
+                    <a href="" class="button button--tag">
+                        <div class="button">
+                            <p>Advanced Technology</p>
+                            <div class="button button--arrow">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
+                            </div>
                         </div>
-                    </div>
-                    <div class="button button--tag">
-                        <p>Transparent Report</p>
-                        <div class="button button--arrow">
-                            <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                    </a>
+                    <a href="" class="button button--tag">
+                        <div class="button">
+                            <p>Transparent Report</p>
+                            <div class="button button--arrow">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="about__information">
@@ -216,7 +228,8 @@
                     <a href="">
                         <div class="button">Get Started</div>
                         <div class="button button--arrow">
-                            <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                            <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                            <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
                         </div>
                     </a>
                 </div>
@@ -225,7 +238,7 @@
         </div>
     </div>
 
-    <div class="box-container pricing">
+    <div class="box-container pricing scroll-half">
         <div class="pricing__container">
             <div class="pricing__header">
                 <h2 class="pricing__title">Pricing</h2>
@@ -272,7 +285,8 @@
                         <a href="">
                             <div class="button">Get Started</div>
                             <div class="button button--arrow">
-                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
                             </div>
                         </a>
                     </div>
@@ -316,7 +330,8 @@
                         <a href="">
                             <div class="button background--white">Get Started</div>
                             <div class="button button--arrow background--white">
-                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
                             </div>
                         </a>
                     </div>
@@ -364,7 +379,8 @@
                         <a href="">
                             <div class="button">Get Started</div>
                             <div class="button button--arrow">
-                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
                             </div>
                         </a>
                     </div>
@@ -505,27 +521,13 @@
         </div>
     </div>
 
-    <div class="box-container client">
+    <div class="box-container client scroll-half">
         <div class="client__container">
             <div class="client__header">
                 <h2>What Our Clients Say</h2>
             </div>
             <div class="client__slide">
-                <div class="slide__nav">
-                    <a href="">
-                        <div class="button button--arrow">
-                            <img src="./assets/icons/iconBackArrow.png" alt="iconArrow">
-                        </div>
-                    </a>
-
-                    <a href="">
-                        <div class="button button--arrow">
-                            <img src="./assets/icons/iconForwardArrow.png" alt="iconArrow">
-                        </div>
-                    </a>
-                </div>
-
-                <div class="slide__lis single-item slide__list--mobile">
+                <div class="slide__list single-item slide__list--mobile">
                     <div class="slide__item">
                         <div class="slide__container">
                             <div class="slide__content">
@@ -897,7 +899,7 @@
         </div>
     </div>
 
-    <div class="box-container insights">
+    <div class="box-container insights scroll-half">
         <div class="insights__container">
             <div class="insights__header">
                 <h2>Insights and Updates</h2>
@@ -906,25 +908,40 @@
                 <div class="insights__list">
                     <div class="insights__item">
                         <a href="">
-                            <div class="button">Marketing</div>
+                            <div class="button">
+                                <p class="button__text button__text--main">Marketing</p>
+                                <p class="button__text button__text--sub">Readmore</p>
+                            </div>
                         </a>
-                        <img src="./assets/images/insights1.svg" alt="insights1">
+                        <div class="insights__item--image">
+                            <img src="./assets/images/insights1.svg" alt="insights1">
+                        </div>
                         <p>Jan 12, 2022</p>
                         <h3>Maximizing Your Rental Property's Potential</h3>
                     </div>
                     <div class="insights__item">
                         <a href="">
-                            <div class="button">Trends</div>
+                            <div class="button">
+                                <p class="button__text button__text--main">Trends</p>
+                                <p class="button__text button__text--sub">Readmore</p>
+                            </div>
                         </a>
-                        <img src="./assets/images/insights2.svg" alt="insights2">
+                        <div class="insights__item--image">
+                            <img src="./assets/images/insights2.svg" alt="insights2">
+                        </div>
                         <p>Jan 12, 2022</p>
                         <h3>The Future of Real Estate Management</h3>
                     </div>
                     <div class="insights__item">
                         <a href="">
-                            <div class="button">Technology</div>
+                            <div class="button">
+                                <p class="button__text button__text--main">Technology</p>
+                                <p class="button__text button__text--sub">Readmore</p>
+                            </div>
                         </a>
-                        <img src="./assets/images/insights3.svg" alt="insights3">
+                        <div class="insights__item--image">
+                            <img src="./assets/images/insights3.svg" alt="insights3">
+                        </div>
                         <p>Jan 12, 2022</p>
                         <h3>Top Tips for Effective Tenant Management</h3>
                     </div>
@@ -934,14 +951,15 @@
                     <a href="">
                         <div class="button">Read More</div>
                         <div class="button button--arrow">
-                            <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                            <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                            <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
                         </div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="box-container question">
+    <div class="box-container question scroll-half">
         <div class="question__container">
             <div class="question__header">
                 <h2>Frequently Asked Questions</h2>
@@ -1011,7 +1029,7 @@
         </div>
     </div>
 
-    <div class="box_container">
+    <div class="box_container scroll-half">
         <div class="community">
             <div class="community__content">
                 <h1>Join Our Community of Successful Property Managers</h1>
@@ -1023,7 +1041,8 @@
                             <a href="">
                                 <div class="button">Book appointment</div>
                                 <div class="button button--arrow">
-                                    <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                                    <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                    <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
                                 </div>
                             </a>
                         </div>
@@ -1046,12 +1065,15 @@
             <div class="community__image">
                 <div class="community__tag">
                     <div class="community__tag--top">
-                        <div class="button">
-                            <p>Manage with Ease</p>
-                            <div class="button button--arrow">
-                                <img src="./assets/icons/iconArrow.svg" alt="iconArrow">
+                        <a href="" class="button">
+                            <div class="button">
+                                <p>Manage with Ease</p>
+                                <div class="button button--arrow">
+                                    <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--main">
+                                    <img src="./assets/icons/iconArrow.svg" alt="iconArrow" class="button--sub">
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <img src="./assets/images/introduce1.png" alt="introduce1">
@@ -1060,7 +1082,7 @@
         </div>
     </div>
 
-    <div class="footer__wrap">
+    <div class="footer__wrap scroll-half">
         <div class="box-container">
             <div class="footer">
                 <div class="footer__container">
@@ -1096,6 +1118,9 @@
 
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <!-- <script type="text/javascript" src="assets/animations/slick-1.8.1/slick-1.8.1/slick/"></script> -->
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- <script type="text/javascript" src="slick/slick.min.js"></script>F -->
@@ -1105,12 +1130,17 @@
     <!-- <script src="./js/slick.js"></script> -->
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.single-item').slick();
+            $('.single-item').slick({
+                prevArrow: '<button class="custom-arrow prev"><img src="./assets/icons/iconBackArrow.png" alt="iconArrow"></button>',
+                nextArrow: '<button class="custom-arrow next"><img src="./assets/icons/iconForwardArrow.png" alt="iconArrow"></button>',
+            });
         });
         $('.multiple-items').slick({
             infinite: true,
             slidesToShow: 2,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            prevArrow: '<button class="custom-arrow prev"><img src="./assets/icons/iconBackArrow.png" alt="iconArrow"></button>',
+            nextArrow: '<button class="custom-arrow next"><img src="./assets/icons/iconForwardArrow.png" alt="iconArrow"></button>',
         });
 
         $('.center').slick({
@@ -1136,8 +1166,27 @@
                         slidesToShow: 1
                     }
                 }
-            ]
+            ],
+            prevArrow: '<button class="custom-arrow prev"><img src="./assets/icons/iconBackArrow.png" alt="iconArrow"></button>',
+            nextArrow: '<button class="custom-arrow next"><img src="./assets/icons/iconForwardArrow.png" alt="iconArrow"></button>',
         });
+
+        ScrollReveal().reveal('.scroll');
+        ScrollReveal().reveal('.scroll-half', {
+            delay: 500,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 800,
+            easing: 'ease-in-out'
+        });
+        ScrollReveal().reveal('.scroll-1', {
+            delay: 1000,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 800,
+            easing: 'ease-in-out'
+        });
+        ScrollReveal().reveal('.scroll-2', { delay: 2000 });
     </script>
 
 
