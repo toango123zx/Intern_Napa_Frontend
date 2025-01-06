@@ -146,6 +146,15 @@
         img {
             width: 17px;
             height: 17px;
+            transform: translateX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                transform: translateX(50%);
+
+            }
         }
     }
 
@@ -362,33 +371,71 @@
                             @include mixin.layout-flex(var.$flex-row, var.$flex-start, var.$flex-center);
                         }
 
+                        &:hover {
+                            .button {
+                                background-color: var.$purple;
+
+                                &.button--arrow {
+                                    border: 0px;
+
+                                    .button--main {
+                                        transform: translate(125%, -100%);
+                                        opacity: 0;
+                                    }
+
+                                    .button--sub {
+                                        transform: translate(0%, 0%);
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+
                         .button {
                             font-family: "Plus Jakarta Sans", serif;
                             @include mixin.button(var.$primary, #ffffff00, var.$black, 15px 40px);
-                            border: 1px solid var.$white;
-                            max-width: 40px;
-                            max-height: 40px;
-
-                            @include mixin.respond-to(lg) {
-                                max-width: 50px;
-                                max-height: 50px;
-                            }
 
                             &.button--arrow {
                                 position: relative;
                                 @include mixin.layout-flex(var.$flex-row, var.$flex-center, var.$flex-center);
-                                padding: 15px 15px;
-                            }
-                        }
+                                // padding: 15px 15px;
+                                width: 40px;
+                                height: 40px;
+                                padding: 0;
+                                border: 1px solid var.$white;
 
-                        img {
-                            width: 24px;
-                            height: 24px;
+
+                                @include mixin.respond-to(lg) {
+                                    width: 50px;
+                                    height: 50px;
+                                }
+
+
+                                img {
+                                    position: absolute;
+                                    width: 24px;
+                                    height: 24px;
+                                }
+
+                                .button--main {
+                                    opacity: 1;
+                                    transition: transform 0.3s ease, opacity 0.1s ease;
+
+                                }
+
+                                .button--sub {
+                                    transform: translate(-125%, 100%);
+                                    opacity: 0;
+                                    transition: transform 0.3s ease, opacity 0.1s ease;
+
+                                }
+                            }
                         }
                     }
 
                     .tag__description {
                         @include mixin.layout-flex(var.$flex-row, var.$flex-start, var.$flex-center, 24px);
+                        @include mixin.media-query(margin-bottom, 14px, 9px, 10px, 10px);
                         @include mixin.media-query(gap, 24px, 20px, 10px 10px);
                         font-family: "Plus Jakarta Sans", serif;
 
@@ -1622,6 +1669,15 @@
         img {
             width: 17px;
             height: 17px;
+            transform: translateX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover {
+            img {
+                transform: translateX(50%);
+
+            }
         }
     }
 

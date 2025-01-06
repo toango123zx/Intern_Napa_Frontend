@@ -588,6 +588,11 @@ h6,
 .introduce__link img {
   width: 17px;
   height: 17px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.introduce__link:hover img {
+  transform: translateX(50%);
 }
 .introduce__image {
   position: relative;
@@ -860,6 +865,20 @@ h6,
     gap: 0;
   }
 }
+.introduce__tag--bottom .tag .tag__information a:hover .button {
+  background-color: #CBB3FF;
+}
+.introduce__tag--bottom .tag .tag__information a:hover .button.button--arrow {
+  border: 0px;
+}
+.introduce__tag--bottom .tag .tag__information a:hover .button.button--arrow .button--main {
+  transform: translate(125%, -100%);
+  opacity: 0;
+}
+.introduce__tag--bottom .tag .tag__information a:hover .button.button--arrow .button--sub {
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
 .introduce__tag--bottom .tag .tag__information a .button {
   font-family: "Plus Jakarta Sans", serif;
   --padding: 15px 40px;
@@ -869,15 +888,6 @@ h6,
   --font-weight: 400;
   --color: #000000;
   --line-height: 1.2em;
-  border: 1px solid #FFFFFF;
-  max-width: 40px;
-  max-height: 40px;
-}
-@media (min-width: 1080px) {
-  .introduce__tag--bottom .tag .tag__information a .button {
-    max-width: 50px;
-    max-height: 50px;
-  }
 }
 .introduce__tag--bottom .tag .tag__information a .button.button--arrow {
   position: relative;
@@ -886,11 +896,30 @@ h6,
   justify-content: center;
   align-items: center;
   gap: 0;
-  padding: 15px 15px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #FFFFFF;
 }
-.introduce__tag--bottom .tag .tag__information a img {
+@media (min-width: 1080px) {
+  .introduce__tag--bottom .tag .tag__information a .button.button--arrow {
+    width: 50px;
+    height: 50px;
+  }
+}
+.introduce__tag--bottom .tag .tag__information a .button.button--arrow img {
+  position: absolute;
   width: 24px;
   height: 24px;
+}
+.introduce__tag--bottom .tag .tag__information a .button.button--arrow .button--main {
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.1s ease;
+}
+.introduce__tag--bottom .tag .tag__information a .button.button--arrow .button--sub {
+  transform: translate(-125%, 100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.1s ease;
 }
 .introduce__tag--bottom .tag .tag__information .tag__description {
   display: flex;
@@ -898,8 +927,24 @@ h6,
   justify-content: flex-start;
   align-items: center;
   gap: 24px;
+  margin-bottom: 14px;
   gap: 24px;
   font-family: "Plus Jakarta Sans", serif;
+}
+@media (min-width: 810px) and (max-width: 1080px) {
+  .introduce__tag--bottom .tag .tag__information .tag__description {
+    margin-bottom: 9px;
+  }
+}
+@media (min-width: 1080px) and (max-width: 1440px) {
+  .introduce__tag--bottom .tag .tag__information .tag__description {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .introduce__tag--bottom .tag .tag__information .tag__description {
+    margin-bottom: 10px;
+  }
 }
 @media (min-width: 810px) and (max-width: 1080px) {
   .introduce__tag--bottom .tag .tag__information .tag__description {
@@ -2427,6 +2472,11 @@ h6,
 .community__link img {
   width: 17px;
   height: 17px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.community__link:hover img {
+  transform: translateX(50%);
 }
 .community__image {
   position: relative;
