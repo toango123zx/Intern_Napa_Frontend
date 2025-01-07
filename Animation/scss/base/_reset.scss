@@ -9,6 +9,10 @@
     font-family: "Plus Jakarta Sans", serif;
 }
 
+img {
+    object-fit: cover;
+}
+
 .button {
     padding: var(--padding);
     background-color: var(--background-color);
@@ -32,4 +36,8 @@ a {
 
 .reveal-box {
     transform: translateY(50px);
+}
+
+ul {
+    list-style-type: none;
 }

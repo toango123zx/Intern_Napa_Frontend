@@ -73,7 +73,7 @@
             margin-bottom: 40px;
 
             @include mixin.respond-to(md) {
-                @include mixin.layout-flex(var.$flex-row, var.$flex-start, var.$flex-center);
+                @include mixin.layout-flex(var.$flex-row, var.$flex-start, var.$flex-center, 24px);
                 margin-bottom: 0;
             }
         }

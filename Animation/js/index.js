@@ -12,4 +12,17 @@ const buttonSwitch = () => {
 const question = (item) => {
     const description = item.querySelector('.question__text--description');
     description.classList.toggle('question--show');
+
+    const image = item.querySelector('img');
+    image.classList.toggle('img--rotate');
+}
+
+const menuHeaderMobile = () => {
+    const menu = document.querySelector('.menu--mobile');
+    menu.classList.toggle('menu--show');
+
+    const iconMenuRotateFavorable = document.querySelector('#iconMenuRotateFavorable');
+    iconMenuRotateFavorable.classList.toggle('block--rotate-favorable');
+    const iconMenuRotateReverse = document.querySelector('#iconMenuRotateReverse');
+    iconMenuRotateReverse.classList.toggle('block--rotate-reverse');
 }

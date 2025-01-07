@@ -12,13 +12,8 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="./scss/main.css">
-    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" /> -->
-    <link rel="stylesheet" type="text/css" href="assets/animations/slick-1.8.1/slick-1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="assets/animations/slick-1.8.1/slick-1.8.1/slick/slick-theme.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css+" /> -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <title>Home</title>
 </head>
@@ -32,12 +27,22 @@
                 <h3>Bayt</h3>
             </div>
 
-            <div class="header__nav">
+            <div class="header__nav" onclick="menuHeaderMobile()">
                 <div class="header__nav--menu">
-                    <div></div>
-                    <div></div>
+                    <div id="iconMenuRotateFavorable"></div>
+                    <div id="iconMenuRotateReverse"></div>
                 </div>
-                <ul>
+                <div class="menu--mobile">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Serivce</a></li>
+                        <li><a href="">Why Us</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Get Started</a></li>
+                    </ul>
+                </div>
+                <ul class="menu--desktop">
                     <li><a href="">Home</a></li>
                     <li><a href="">Serivce</a></li>
                     <li><a href="">Why Us</a></li>
@@ -107,7 +112,10 @@
                     <div class="introduce__tag--bottom">
                         <div class="tag">
                             <div class="tag__avatar">
-
+                                <img src="./assets/images/avatarIntroduce1.png" alt="avatarIntroduce1">
+                                <img src="./assets/images/client1.jpg" alt="client1">
+                                <img src="./assets/images/avatarIntroduce1.png" alt="avatarIntroduce1">
+                                <img src="./assets/images/avatarIntroduce3.png" alt="avatarIntroduce4">
                             </div>
                             <div class="tag__information">
                                 <a href="">
@@ -123,7 +131,7 @@
                                 </div>
                             </div>
                         </div>
-                        <img src="./assets/images/backgroundIntroduce3.png" alt="introduce2">
+                        <img src="./assets/images/backgroundIntroduce4.png" alt="introduce2">
                     </div>
                 </div>
                 <img src="./assets/images/introduce1.png" alt="introduce1">
@@ -166,7 +174,7 @@
                         </div>
                         <p class="p-lg">Efficiently handle maintenance requests and work orders through our app.</p>
                     </div>
-                    <div class="service__item service__item--large">
+                    <div class="service__item service__item--large service__item--last">
                         <div class="card__title">
                             <h3>Tenant Management</h3>
                             <div class="card__logo">
@@ -248,10 +256,10 @@
             <div class="pricing__info">
                 <div class="pricing__nav">
                     <label class="pricing__switch">
-                        <span id="pricingYear" class="pricing__text">Monthly</span>
+                        <span id="pricingYear" class="pricing__text  text--purple">Monthly</span>
                         <input class="pricing__input" type="checkbox" checked onclick="buttonSwitch()">
                         <span class="pricing__slider"></span>
-                        <span id="pricingMonth" class="pricing__text text--purple">Yearly</span>
+                        <span id="pricingMonth" class="pricing__text">Yearly</span>
                     </label>
                 </div>
 
@@ -566,7 +574,7 @@
                             <div class="slide__illustration">
                                 <div class="slide__information">
                                     <div class="slide__image">
-                                        <img src="./assets/images/client1.jpg" alt="client1">
+                                        <img src="./assets/images/avatarIntroduce1.png" alt="client1">
                                     </div>
                                     <div class="slide__information--personal">
                                         <p class="slide__text--name">William M.</p>
@@ -592,7 +600,7 @@
                             <div class="slide__illustration">
                                 <div class="slide__information">
                                     <div class="slide__image">
-                                        <img src="./assets/images/client1.jpg" alt="client1">
+                                        <img src="./assets/images/avatarIntroduce2.png" alt="client1">
                                     </div>
                                     <div class="slide__information--personal">
                                         <p class="slide__text--name">John D.</p>
@@ -615,7 +623,7 @@
                             <div class="slide__illustration">
                                 <div class="slide__information">
                                     <div class="slide__image">
-                                        <img src="./assets/images/client1.jpg" alt="client1">
+                                        <img src="./assets/images/avatarIntroduce3.png" alt="client1">
                                     </div>
                                     <div class="slide__information--personal">
                                         <p class="slide__text--name">Michael S.</p>
@@ -689,7 +697,7 @@
                             <div class="slide__illustration">
                                 <div class="slide__information">
                                     <div class="slide__image">
-                                        <img src="./assets/images/client1.jpg" alt="client1">
+                                        <img src="./assets/images/avatarIntroduce1.png" alt="client2">
                                     </div>
                                     <div class="slide__information--personal">
                                         <p class="slide__text--name">William M.</p>
@@ -715,7 +723,7 @@
                             <div class="slide__illustration">
                                 <div class="slide__information">
                                     <div class="slide__image">
-                                        <img src="./assets/images/client1.jpg" alt="client1">
+                                        <img src="./assets/images/avatarIntroduce2.png" alt="client3">
                                     </div>
                                     <div class="slide__information--personal">
                                         <p class="slide__text--name">John D.</p>
@@ -738,7 +746,7 @@
                             <div class="slide__illustration">
                                 <div class="slide__information">
                                     <div class="slide__image">
-                                        <img src="./assets/images/client1.jpg" alt="client1">
+                                        <img src="./assets/images/client1.jpg" alt="client4">
                                     </div>
                                     <div class="slide__information--personal">
                                         <p class="slide__text--name">Michael S.</p>
@@ -762,7 +770,7 @@
                             <div class="slide__illustration">
                                 <div class="slide__information">
                                     <div class="slide__image">
-                                        <img src="./assets/images/client1.jpg" alt="client1">
+                                        <img src="./assets/images/avatarIntroduce3.png" alt="client5">
                                     </div>
                                     <div class="slide__information--personal">
                                         <p class="slide__text--name">David L.</p>
@@ -812,7 +820,7 @@
                             <div class="slide__illustration">
                                 <div class="slide__information">
                                     <div class="slide__image">
-                                        <img src="./assets/images/client1.jpg" alt="client1">
+                                        <img src="./assets/images/avatarIntroduce1.png" alt="client2">
                                     </div>
                                     <div class="slide__information--personal">
                                         <p class="slide__text--name">William M.</p>
@@ -838,7 +846,7 @@
                             <div class="slide__illustration">
                                 <div class="slide__information">
                                     <div class="slide__image">
-                                        <img src="./assets/images/client1.jpg" alt="client1">
+                                        <img src="./assets/images/avatarIntroduce2.png" alt="client3">
                                     </div>
                                     <div class="slide__information--personal">
                                         <p class="slide__text--name">John D.</p>
@@ -861,7 +869,7 @@
                             <div class="slide__illustration">
                                 <div class="slide__information">
                                     <div class="slide__image">
-                                        <img src="./assets/images/client1.jpg" alt="client1">
+                                        <img src="./assets/images/client1.jpg" alt="client3">
                                     </div>
                                     <div class="slide__information--personal">
                                         <p class="slide__text--name">Michael S.</p>
@@ -885,7 +893,7 @@
                             <div class="slide__illustration">
                                 <div class="slide__information">
                                     <div class="slide__image">
-                                        <img src="./assets/images/client1.jpg" alt="client1">
+                                        <img src="./assets/images/avatarIntroduce3.png" alt="client4">
                                     </div>
                                     <div class="slide__information--personal">
                                         <p class="slide__text--name">David L.</p>
@@ -1034,7 +1042,7 @@
     <div class="box_container scroll-half">
         <div class="community">
             <div class="community__content">
-                <h1>Join Our Community of Successful Property Managers</h1>
+                <h2>Join Our Community of Successful Property Managers</h2>
                 <div class="community__describe">
                     <div class="community__detail">
                         <div class="community__description">
@@ -1055,14 +1063,14 @@
                             </a>
                         </div>
                     </div>
-                    <div class="community__image--sub">
-                        <div class="community__tag">
-                            <p class="p-sm">Unlock the true potential with our app</p>
-                            <img src="./assets/images/backgroundIntroduce2.svg" alt="backgroundIntroduce2">
-                        </div>
-                        <img src="./assets/images/introduce1.png" alt="community2">
-                    </div>
                 </div>
+            </div>
+            <div class="community__image--sub">
+                <div class="community__tag">
+                    <p class="p-sm">Unlock the true potential with our app</p>
+                    <img src="./assets/images/backgroundIntroduce2.svg" alt="backgroundIntroduce2">
+                </div>
+                <img src="./assets/images/introduce1.png" alt="community2">
             </div>
             <div class="community__image">
                 <div class="community__tag">
@@ -1090,7 +1098,7 @@
                 <div class="footer__container">
                     <div class="footer--top">
                         <div class="logo">
-                            <img src="./assets/images/logo.png" alt="">
+                            <img src="./assets/images/logo.png" alt="logo">
                             <p>Bayt</p>
                         </div>
                         <ul class="footer__nav">
@@ -1118,18 +1126,13 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <!-- <script type="text/javascript" src="assets/animations/slick-1.8.1/slick-1.8.1/slick/"></script> -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <!-- <script type="text/javascript" src="slick/slick.min.js"></script>F -->
-    <script type="text/javascript" src="assets/animations/slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
+
 
     <script src="./js/index.js"></script>
-    <!-- <script src="./js/slick.js"></script> -->
     <script type="text/javascript">
         $(document).ready(function () {
             $('.single-item').slick({
@@ -1190,7 +1193,6 @@
         });
         ScrollReveal().reveal('.scroll-2', { delay: 2000 });
     </script>
-
 
 </body>
 
