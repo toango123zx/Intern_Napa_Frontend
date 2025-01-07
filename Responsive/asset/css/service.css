@@ -1,0 +1,5 @@
+@media only screen and (max-height: 1245px) {
+    .box-outer__footer {
+        position: relative;
+    }
+}
